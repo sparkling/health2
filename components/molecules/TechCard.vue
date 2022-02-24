@@ -6,6 +6,7 @@
   >
     <Picture :image-src="blok.logo.filename" :image-alt="blok.logo.alt" />
     <Heading tag="h3" :content="blok.name" />
+    <p :content="blok.logo"/>
     <ExternalLink
       class="text-md text-gray-500"
       :link="blok.url.url"

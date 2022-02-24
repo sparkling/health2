@@ -27,6 +27,7 @@ export default {
       .get('cdn/stories/' + context.params.slug, {
         language,
         version,
+        resolve_assets: "1"
       })
       .then(async (res) => {
         await context.store.dispatch(

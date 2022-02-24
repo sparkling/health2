@@ -10,6 +10,7 @@
 </template>
 
 <script>
+
 export default {
   asyncData(context) {
     const version =
@@ -18,12 +19,14 @@ export default {
       context.app.i18n.locale === 'en'
         ? 'default'
         : `${context.app.i18n.locale}`
+    //const resolve_assets = "1"
 
     // Load the JSON from the API - loading the page content (any other page)
     return context.app.$storyapi
       .get('cdn/stories/home', {
         language,
         version,
+        resolve_assets: "1"
       })
       .then((res) => {
         return res.data
